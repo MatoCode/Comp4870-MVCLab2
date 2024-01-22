@@ -1,0 +1,13 @@
+@{
+    ViewBag.Title = "Text File page";
+    var files = ViewBag.Files as string[];
+}
+
+<div>
+    <h1 class="display-4">Welcome</h1>
+    <p>Matthew Siggs</p>
+    @foreach (var file in files)
+    {
+        <a asp-controller="File" asp-action="Display" asp-route-id="@file">@file</a> <br />
+    }
+</div>
